@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="css/style.css" />
+        <title>Tic-tac-toe ❌ ⭕ - multiplayer game</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="score">
+                <div class="score__o display">
+                    <svg>
+                        <use xlink:href="img/sprite.svg/#rec"></use>
+                    </svg>
+                    <div class="score__wins">4 wins</div>
+                </div>
+
+                <div class="score__x display">
+                    <svg>
+                        <use xlink:href="img/sprite.svg/#close"></use>
+                    </svg>
+                    <div class="score__wins">1 win</div>
+                </div>
+
+                <div class="score__draw display">
+                    <svg>
+                        <use xlink:href="img/sprite.svg/#scale"></use>
+                    </svg>
+                    <div class="score__wins">2 draws</div>
+                </div>
+            </div>
+
+            <main class="main">
+                <div class="main__line main__l1">
+                    <button class="box" value="0"></button>
+                    <button class="box" value="1"></button
+                    ><button class="box" value="2"></button>
+                </div>
+
+                <div class="main__line main__l2">
+                    <button class="box" value="3"></button
+                    ><button class="box" value="4"></button
+                    ><button class="box" value="5"></button>
+                </div>
+
+                <div class="main__line main__l3">
+                    <button class="box" value="6"></button
+                    ><button class="box" value="7"></button
+                    ><button class="box" value="8"></button>
+                </div>
+            </main>
+
+            <div class="next">
+                <div class="next__container">
+                    <div class="next__text">Turn:</div>
+                    <div class="next__icon">
+                        <svg class="x hidden">
+                            <use xlink:href="img/sprite.svg/#close"></use>
+                        </svg>
+                        <svg class="o">
+                            <use xlink:href="img/sprite.svg/#rec"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="nav">
+                <div class="nav__icon">
+                    <svg class="restart">
+                        <use xlink:href="img/sprite.svg/#update-arrow"></use>
+                    </svg>
+                </div>
+                <div class="nav__player">1 player</div>
+                <div class="nav__icon">
+                    <svg class="settings">
+                        <use xlink:href="img/sprite.svg/#settings"></use>
+                    </svg>
+                </div>
+            </nav>
+        </div>
+    </body>
+    <script src="main.js"></script>
+</html>

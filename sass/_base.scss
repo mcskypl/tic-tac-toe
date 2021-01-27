@@ -1,0 +1,29 @@
+$color-x: #3989d4;
+$color-o: #39bcd4;
+$color-gray: #8e9192;
+$color-bg-light: #ffffff;
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+
+html {
+   box-sizing: border-box;
+   font-size: 62.5%;
+}
+
+body {
+   font-family: 'Fredoka One', cursive;
+   line-height: 1.6;
+   color: $color-gray;
+   background-color: $color-bg-light;
+}
