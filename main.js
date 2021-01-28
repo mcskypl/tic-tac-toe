@@ -8,9 +8,10 @@ appHeight()
 // -----------------------------
 
 const settingsButton = document.querySelector('.settings')
+const containerElement = document.querySelector('.container')
 
 settingsButton.addEventListener('click', () => {
-    document.body.style.backgroundColor = '#242424'
+    containerElement.classList.toggle('dark')
 })
 
 const turnEl = document.querySelector('.next__text')

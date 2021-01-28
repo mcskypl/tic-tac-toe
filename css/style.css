@@ -30,6 +30,9 @@ body {
   height: 100vh;
   height: var(--app-height); }
 
+.dark {
+  background-color: #242424; }
+
 .score .display {
   display: flex;
   flex-direction: column;
@@ -93,7 +96,7 @@ body {
 
 .next__icon {
   align-self: center;
-  padding: 0 0.8rem;
+  padding: 0 0 0 1.2rem;
   position: relative; }
 
 .next .o {
@@ -117,12 +120,11 @@ body {
   height: 2.4rem;
   width: 2.4rem;
   display: block;
-  fill: #fff; }
+  fill: #8e9192; }
 
 .nav__icon {
   border: 1px solid #8e9192;
   border-radius: 50%;
-  background-color: #8e9192;
   padding: 1.6rem; }
 
 .nav__player {

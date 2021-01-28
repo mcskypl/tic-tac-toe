@@ -1,3 +1,7 @@
+.dark {
+    background-color: $color-bg-dark;
+}
+
 .score {
     .display {
         display: flex;
@@ -86,7 +90,7 @@
 
     &__icon {
         align-self: center;
-        padding: 0 0.8rem;
+        padding: 0 0 0 1.2rem;
         position: relative;
     }
 
@@ -118,13 +122,12 @@
         height: 2.4rem;
         width: 2.4rem;
         display: block;
-        fill: #fff;
+        fill: $color-gray;
     }
 
     &__icon {
         border: 1px solid $color-gray;
         border-radius: 50%;
-        background-color: $color-gray;
         padding: 1.6rem;
     }
 
