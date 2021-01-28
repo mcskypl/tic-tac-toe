@@ -7,7 +7,16 @@ window.addEventListener('resize', appHeight)
 appHeight()
 // -----------------------------
 
+const settingsButton = document.querySelector('.settings')
+
+settingsButton.addEventListener('click', () => {
+    document.body.style.backgroundColor = '#242424'
+})
+
+const turnEl = document.querySelector('.next__text')
+
 const buttons = document.querySelectorAll('.box')
+const iconEl = document.querySelector('.next__icon')
 const turn_x = document.querySelector('.x')
 const turn_o = document.querySelector('.o')
 
@@ -45,7 +54,8 @@ const win = (tab) => {
         (tab.includes('0') && tab.includes('4') && tab.includes('8')) ||
         (tab.includes('2') && tab.includes('4') && tab.includes('6'))
     ) {
-        console.log('win ' + turn)
+        iconEl.classList.add('hidden')
+        turnEl.innerHTML = `${turn} win!`
         game = false
     }
 }
