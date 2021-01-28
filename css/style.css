@@ -10,7 +10,8 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  height: -webkit-fill-available; }
 
 body {
   font-family: 'Fredoka One', cursive;
@@ -122,8 +123,6 @@ body {
   padding: 0.4rem 1.4rem; }
 
 .container {
-  width: 100%;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
