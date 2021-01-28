@@ -132,7 +132,7 @@ body {
   padding: 0.4rem 1.4rem; }
 
 .container {
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
