@@ -1,3 +1,12 @@
+// 100vh in safari--------------
+const appHeight = () => {
+    const doc = document.documentElement
+    doc.style.setProperty('--app-height', `${window.innerHeight}px`)
+}
+window.addEventListener('resize', appHeight)
+appHeight()
+// -----------------------------
+
 const buttons = document.querySelectorAll('.box')
 const turn_x = document.querySelector('.x')
 const turn_o = document.querySelector('.o')

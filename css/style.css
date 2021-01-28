@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+:root {
+  --app-height: 100%; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -18,8 +21,10 @@ body {
   line-height: 1.6;
   color: #8e9192;
   background-color: #ffffff;
-  min-height: 100vh;
-  min-height: -webkit-fill-available; }
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  height: var(--app-height); }
 
 .score .display {
   display: flex;
