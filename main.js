@@ -91,11 +91,13 @@ const newGame = () => {
                 if (turn) {
                     tabX.push(a.value);
                     a.appendChild(new_X());
+                    a.classList.add('anim');
                     win(tabX);
                     turn = 0;
                 } else {
                     tabO.push(a.value);
                     a.appendChild(new_O());
+                    a.classList.add('anim');
                     win(tabO);
                     turn = 1;
                 }

@@ -33,6 +33,15 @@ body {
 .dark {
   background-color: #242424; }
 
+.anim img {
+  animation: pulse 1s; }
+
+@keyframes pulse {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 .score .display {
   display: flex;
   flex-direction: column;
@@ -126,7 +135,10 @@ body {
 .nav__icon {
   border: 1px solid #8e9192;
   border-radius: 50%;
-  padding: 1.6rem; }
+  padding: 1.6rem;
+  transition: all 1s; }
+  .nav__icon:active {
+    border-radius: 0; }
 
 .nav__player {
   font-size: 2rem;
