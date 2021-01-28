@@ -40,6 +40,8 @@ const newGame = () => {
     document.querySelector('.main').innerHTML = initGameBlock;
     buttons = document.querySelectorAll('.box');
     game = true;
+    tabX = [];
+    tabO = [];
 };
 const gameI = () => {
     const new_O = () => {
