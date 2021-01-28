@@ -65,7 +65,8 @@ body {
 
 .main button {
   background: none;
-  border: none; }
+  border: none;
+  cursor: pointer; }
   .main button:focus {
     outline: none; }
 
