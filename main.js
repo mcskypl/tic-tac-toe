@@ -1,28 +1,28 @@
-const settingsButton = document.querySelector('.settings');
-const restartButton = document.querySelector('.restart');
-const containerElement = document.querySelector('.container');
-
-settingsButton.addEventListener('click', () => {
-    containerElement.classList.toggle('dark');
-});
-
 const initGameBlock = `<div class="main__line main__l1">
                     <button class="box" value="0"></button>
                     <button class="box" value="1"></button
                     ><button class="box" value="2"></button>
                 </div>
-
                 <div class="main__line main__l2">
                     <button class="box" value="3"></button
                     ><button class="box" value="4"></button
                     ><button class="box" value="5"></button>
                 </div>
-
                 <div class="main__line main__l3">
                     <button class="box" value="6"></button
                     ><button class="box" value="7"></button
                     ><button class="box" value="8"></button>
                 </div>`;
+
+const settingsButton = document.querySelector('.settings');
+const restartButton = document.querySelector('.restart');
+const containerElement = document.querySelector('.container');
+const oWinsEl = document.querySelector('.o-wins');
+const xWinsEl = document.querySelector('.x-wins');
+
+settingsButton.addEventListener('click', () => {
+    containerElement.classList.toggle('dark');
+});
 
 const turnEl = document.querySelector('.next__text');
 
@@ -36,14 +36,21 @@ let tabX = [];
 let tabO = [];
 let buttons = document.querySelectorAll('.box');
 
-const newGame = () => {
+let oWin = 0;
+let xWin = 0;
+
+const init = () => {
     document.querySelector('.main').innerHTML = initGameBlock;
     buttons = document.querySelectorAll('.box');
+    turn = 0;
     game = true;
     tabX = [];
     tabO = [];
+
+    newGame();
 };
-const gameI = () => {
+
+const newGame = () => {
     const new_O = () => {
         const newO = document.createElement('img');
         newO.src = 'img/o.png';
@@ -57,11 +64,7 @@ const gameI = () => {
     };
 
     const checkArray = (value) => {
-        if (tabO.includes(value) || tabX.includes(value)) {
-            return true;
-        } else {
-            return false;
-        }
+        return tabO.includes(value) || tabX.includes(value);
     };
 
     const win = (tab) => {
@@ -77,6 +80,7 @@ const gameI = () => {
         ) {
             iconEl.classList.add('hidden');
             turnEl.innerHTML = `${turn} win!`;
+            turn ? xWin++ : oWin++;
             game = false;
         }
     };
@@ -98,6 +102,8 @@ const gameI = () => {
 
                 turn_o.classList.toggle('hidden');
                 turn_x.classList.toggle('hidden');
+                oWinsEl.innerHTML = oWin;
+                xWinsEl.innerHTML = xWin;
                 console.log(tabX, tabO);
             }
         });
@@ -105,6 +111,9 @@ const gameI = () => {
 };
 
 restartButton.addEventListener('click', () => {
-    newGame();
-    gameI();
+    init();
 });
+
+window.onload = () => {
+    init();
+};
